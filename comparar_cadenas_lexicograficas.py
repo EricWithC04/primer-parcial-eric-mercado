@@ -21,10 +21,7 @@ def comparar_cadenas_lexicograficas(cadena1, cadena2):
         raise ValueError("Ambas cadenas deben tener la misma longitud")
     
     # Obtenemos el largo de las cadenas
-    if len(cadena1) > len(cadena2):
-        longitud_cadena = len(cadena1)
-    else:
-        longitud_cadena = len(cadena2)
+    longitud_cadena = len(cadena1)
     
     # Recorremos y comparamos cada uno de los caracteres de ambas cadenas
     for i in range(longitud_cadena):
