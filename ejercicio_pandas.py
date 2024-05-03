@@ -12,3 +12,10 @@ def ventas_por_trimestre(ventas):
             trimestres[t]["Total"] += ventas[i]["total_ventas"]
 
     return trimestres
+
+def ventas_20000(ventas):
+    ventas_superior_20000 = [v for v in ventas if v["total_ventas"] > 20000]
+    
+    print(ventas_superior_20000)
+    
+    return ventas_superior_20000
