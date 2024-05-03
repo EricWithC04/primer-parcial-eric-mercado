@@ -24,15 +24,14 @@ def ventas_20000(ventas):
     return ventas_superior_20000
 
 def mayor_volumen_ventas(ventas):
-    mayor = ventas[0]
+    print(ventas.max())
     
-    for v in ventas:
-        if v["total_ventas"] > mayor["total_ventas"]:
-            mayor = v
-    
-    return mayor
+    return ventas.max()
 
 def promedio_ventas(ventas):
     return sum(ventas["total_ventas"]) / len(ventas)
 
-print(promedio_ventas(v_m))
+def retorno_dataframe(ventas):
+    df = pd.DataFrame(ventas)
+    
+    return df.filter(items=["mes", "total_ventas"]) 
