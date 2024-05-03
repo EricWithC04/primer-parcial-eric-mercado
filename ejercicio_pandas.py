@@ -1,4 +1,7 @@
 from ventas_mensuales import ventas_mensuales as ventas_m
+import pandas as pd
+
+v_m = pd.DataFrame(ventas_m)
 
 def ventas_por_trimestre(ventas):
     trimestres = {}
@@ -29,4 +32,7 @@ def mayor_volumen_ventas(ventas):
     
     return mayor
 
-print(mayor_volumen_ventas(ventas_m))
+def promedio_ventas(ventas):
+    return sum(ventas["total_ventas"]) / len(ventas)
+
+print(promedio_ventas(v_m))
