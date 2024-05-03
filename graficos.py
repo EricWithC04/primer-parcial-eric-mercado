@@ -12,6 +12,9 @@ plt.title("Tendencia de ventas")
 plt.xlabel("Meses")
 plt.ylabel("Ventas")
 
+# Rotacion de 90 grados pra poder leer de manera entendible
+plt.xticks(rotation=90) 
+
 # Agregamos una cuadricula en el fondo
 plt.grid(True)
 
