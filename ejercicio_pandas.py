@@ -19,3 +19,14 @@ def ventas_20000(ventas):
     print(ventas_superior_20000)
     
     return ventas_superior_20000
+
+def mayor_volumen_ventas(ventas):
+    mayor = ventas[0]
+    
+    for v in ventas:
+        if v["total_ventas"] > mayor["total_ventas"]:
+            mayor = v
+    
+    return mayor
+
+print(mayor_volumen_ventas(ventas_m))
