@@ -35,8 +35,8 @@ def promedio_ventas(ventas):
     # Calculamos y retornamos el promedio de ventas por mes
     return sum(ventas["total_ventas"]) / len(ventas)
 
-def retorno_dataframe(ventas):
-    df = pd.DataFrame(ventas)
+def retorno_dataframe():
+    df = pd.DataFrame(ventas_m)
     
     # Retornamos el DataFrame teniendo solo el mes y las ventas totales del mismo
     return df.filter(items=["mes", "total_ventas"]) 
